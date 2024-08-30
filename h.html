@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    openLogin = ()=>{
+      document.getElementById("login").style.display="flex";
+    }
+    closeLogin= () =>{
+      document.getElementById("login").style.display="none";
+    }
+  </script>
+  <style>
+    .pop-container{
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    .popup{
+      position: absolute;
+      height: 400px;
+      width: 350px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .head{
+      display: flex;
+      justify-content: space-between;
+      margin-top: -10px;
+    }
+
+    .head button{
+      background-color: white;
+      border: white;
+      cursor: pointer;
+    }
+
+    form input,form button{
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0px;
+    }
+    
+    .divider{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .divider hr{
+      width: 50%;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div>
+    <a href="#" onclick="openLogin()">Login</a>
+  </div>
+
+  <div class="pop-container" id="login">
+    <div class="popup">
+      <div class="head">
+        <h1>Login</h1>
+        <button onclick="closeLogin()">X</button>
+      </div>
+        <form action="">
+          <input type="text" placeholder="Phone">
+          <button>Send One Time Password</button>
+          <div class="divider"><hr>or<hr></div>
+          <button>Continue With Email</button>
+          <button>Sign in with Google</button>
+        </form>
+        <hr>
+        <p>New To Zomato? <a href="#">Create Account</a></p>
+    </div>
+  </div>
+</body>
+</html>
